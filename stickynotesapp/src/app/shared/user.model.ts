@@ -2,5 +2,5 @@ export class User {
     fullName: string;
     email: string;
     password: string;
-    //confirmPass;
+    confirmPass: string;
 }

@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { environment } from 'src/environments/environment';
 import {User} from './user.model';
+import {Note} from './note.model';
 
 
 @Injectable({
@@ -13,8 +14,8 @@ export class UserService {
   selectedUser: User ={
     fullName:'',
     email:'',
-    password:''
-    //confirmPass:''
+    password:'',
+    confirmPass:''
   };
 
   noAuthHeader = { headers: new HttpHeaders({'NoAuth': 'True'})};
@@ -32,7 +33,7 @@ export class UserService {
   }
 
   getUserProfile(){
-    return this.http.get(environment.apiBaseUrl + '/userProfile');
+    return this.http.get(environment.apiBaseUrl + '/note');
   }
 
   //Helper Methods

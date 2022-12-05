@@ -1,12 +1,12 @@
-// import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class CustomvalidationService {
+ @Injectable({
+  providedIn: 'root'
+ })
+ export class CustomvalidationService {
 
-//   constructor() { }
-// }
+   constructor() { }
+ }
 import { Directive, Input } from '@angular/core';
 import { Validator, NG_VALIDATORS, AbstractControl, ValidationErrors } from '@angular/forms';
 import { Subscription } from 'rxjs';

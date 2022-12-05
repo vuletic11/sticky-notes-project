@@ -40,7 +40,7 @@ module.exports.authenticate = (req, res, next) => {
 }
 
 //req._id is stored/defined in jwtHelper.js
-module.exports.userProfile = (req, res, next) =>{
+module.exports.read = (req, res, next) =>{
     User.findOne({ _id: req._id },
         (err, user) => {
             if (!user)

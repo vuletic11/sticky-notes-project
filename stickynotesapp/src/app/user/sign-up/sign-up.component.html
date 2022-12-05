@@ -22,11 +22,30 @@
         <label *ngIf="password.errors?.['pattern']" class="validation-message">Must contain uppercase, lowercase character, number, special character</label>
       </div>
 
+      <!-- <mat-form-field>
+        <input matInput placeholder="Confirm password" formControlName="confirmPass" [errorStateMatcher]="matcher">
+          <mat-error *ngIf="signUpForm.hasError('notSame')">
+          Passwords do not match
+        </mat-error>  
+      </mat-form-field> -->
+
       <!-- <input type="password" #password="ngModel" [(ngModel)]="userService.selectedUser.confirmPass" name="ConfirmPassword" placeholder="Repeat password" minlength="8" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
       <div *ngIf="signUpForm.submitted && password.errors">
           <label *ngIf="password.errors?.['required']" class="validation-message">This field is required.</label>
           <label *ngIf="password.errors?.['minlength']" class="validation-message">Enter atleast 8 characters.</label>
         </div> -->
+
+        <!-- <input type="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" name="password" placeholder="Repeat password" required [pattern]="strong" minlength="8" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
+        <div *ngIf="signUpForm.submitted && password.errors">
+            <label *ngIf="password.errors?.['required']" class="validation-message">This field is required.</label>
+            <label *ngIf="password.errors?.['minlength']" class="validation-message">Enter atleast 8 characters. </label>
+            <label *ngIf="password.errors?.['pattern']" class="validation-message">Must contain uppercase, lowercase character, number, special character</label>
+          </div> -->
+<!-- 
+          <input type="password" [FormControl]="confirmFormControl" #repeatPass="ngModel" [(ngModel)]="userService.selectedUser.confirmPass" name="confirmPass" placeholder="Repeat password">
+          <div *ngIf="confirmFormControl.hasError('required')">
+            <label class="validation-message">Not matching</label>
+          </div> -->
 
     <input type="submit" value="Sign Up">
 </form>

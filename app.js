@@ -1,7 +1,11 @@
+//users part
 require('./config/config');
 require('./models/db');
 require('./config/passportConfig');
 
+
+/////////////////////////////////////////////////////////////////////
+//users part
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -32,3 +36,6 @@ app.use((err, req, res, next) => {
 
 //start server
 app.listen(process.env.PORT, () => console.log(`Server started at port: ${process.env.PORT}`)); 
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//notes part

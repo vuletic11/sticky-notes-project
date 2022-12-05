@@ -11,7 +11,7 @@ import { UserComponent } from './user/user.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
 // routes
 import { appRoutes } from './routes';
-import { UserProfileComponent } from './user-profile/user-profile.component';
+import { NoteComponent } from './note/note.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { UserService } from './shared/user.service';
 // other
@@ -23,7 +23,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     AppComponent,
     UserComponent,
     SignUpComponent,
-    UserProfileComponent,
+    NoteComponent,
     SignInComponent
   ],
   imports: [
